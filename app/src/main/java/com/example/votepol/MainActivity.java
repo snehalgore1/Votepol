@@ -40,6 +40,8 @@ public class MainActivity extends AppCompatActivity {
                     public void onComplete(@NonNull Task<AuthResult> task) {
                         if(task.isSuccessful()){
                             Toast.makeText(MainActivity.this, "Registered successfully!",Toast.LENGTH_LONG).show();
+                            email.setText("");
+                            pass.setText("");
                         }
                         else{
                             Toast.makeText(MainActivity.this, task.getException().getMessage(),Toast.LENGTH_LONG).show();
