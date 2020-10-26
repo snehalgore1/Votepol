@@ -28,7 +28,7 @@
         android:layout_width="300dp"
         android:layout_height="wrap_content"
 
-        android:hint="Enter your email id"
+        android:hint="Email"
         android:layout_gravity="center"
         android:layout_marginTop="50dp"
         android:padding="10dp"
