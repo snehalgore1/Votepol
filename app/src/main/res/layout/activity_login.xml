@@ -10,7 +10,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:fontFamily="@font/source_sans_pro_bold"
-        android:text="Login"
+        android:text="@string/loginname"
         android:textAllCaps="true"
         android:textColor="@android:color/holo_red_dark"
         android:textSize="40sp"
@@ -22,33 +22,33 @@
     </TextView>
 
     <EditText
-        android:id="@+id/etemail"
+        android:id="@+id/lgemail"
         android:layout_width="300dp"
         android:layout_height="wrap_content"
 
-        android:hint="Email"
+        android:hint="@string/email"
         android:layout_gravity="center"
         android:layout_marginTop="50dp"
         android:padding="10dp"
         android:inputType="textEmailAddress" />
 
     <EditText
-        android:id="@+id/etpass"
+        android:id="@+id/lgpass"
         android:layout_width="300dp"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
         android:layout_marginTop="50dp"
         android:ems="10"
-        android:hint="Password"
+        android:hint="@string/password"
         android:inputType="textPassword" />
 
     <Button
-        android:id="@+id/btnsignup"
+        android:id="@+id/btnsignin"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
         android:layout_marginTop="50dp"
-        android:text="Sign In"
+        android:text="@string/sign_in"
         app:backgroundTint="#CC673AB7"
 
         >
@@ -61,7 +61,7 @@
         android:layout_height="wrap_content"
         android:layout_gravity="center"
         android:layout_marginTop="50dp"
-        android:text="Sign Up"
+        android:text="@string/sign_up"
         app:backgroundTint="#CC673AB7"
 
         >
