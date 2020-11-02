@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".UIpage3Activity"
+    android:orientation="vertical">
+
+    <Button
+        android:id="@+id/btncreatevote"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="150dp"
+        android:text="CREATE VOTE"
+        android:textSize="25sp"
+        android:textStyle="bold">
+    </Button>
+    <Button
+        android:id="@+id/btncastevote"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="70dp"
+        android:text="CAST VOTE"
+        tools:ignore="MissingConstraints"
+        android:textSize="25sp"
+        android:textStyle="bold">
+    </Button>
+    <Button
+        android:id="@+id/btncreatepoll"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="70dp"
+        android:text="CREATE POLL"
+        tools:ignore="MissingConstraints"
+        android:textSize="25sp"
+        android:textStyle="bold">
+    </Button>
+    <Button
+        android:id="@+id/btncastpoll"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="70dp"
+        android:text="CAST POLL"
+        tools:ignore="MissingConstraints"
+        android:textSize="25sp"
+        android:textStyle="bold">
+    </Button>
+
+</LinearLayout>
+
