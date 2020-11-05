@@ -31,7 +31,7 @@ public class MainActivity extends AppCompatActivity {
         email = findViewById(R.id.etemail);
         pass = findViewById(R.id.etpass);
         sign = findViewById(R.id.btnsignup);
-
+        login=findViewById(R.id.btnlogin);
         firebaseAuth = FirebaseAuth.getInstance();
 
         sign.setOnClickListener(new View.OnClickListener() {
