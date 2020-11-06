@@ -22,6 +22,7 @@ public class MainActivity extends AppCompatActivity {
     Button sign;
     Button login;
 
+
     FirebaseAuth firebaseAuth;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -32,6 +33,7 @@ public class MainActivity extends AppCompatActivity {
         pass = findViewById(R.id.etpass);
         sign = findViewById(R.id.btnsignup);
         login=findViewById(R.id.btnlogin);
+
         firebaseAuth = FirebaseAuth.getInstance();
 
         sign.setOnClickListener(new View.OnClickListener() {
@@ -41,9 +43,22 @@ public class MainActivity extends AppCompatActivity {
                     @Override
                     public void onComplete(@NonNull Task<AuthResult> task) {
                         if(task.isSuccessful()){
-                            Toast.makeText(MainActivity.this, "Registered successfully!",Toast.LENGTH_LONG).show();
-                            email.setText("");
-                            pass.setText("");
+                            firebaseAuth.getCurrentUser().sendEmailVerification().addOnCompleteListener(new OnCompleteListener<Void>() {
+                                @Override
+                                public void onComplete(@NonNull Task<Void> task) {
+                                    if (task.isSuccessful()){
+                                            Toast.makeText(MainActivity.this, "Registered successfully! Please check your Email for verification .",Toast.LENGTH_LONG).show();
+                                        email.setText("");
+                                        pass.setText("");
+                                    }
+                                    else {
+                                        Toast.makeText(MainActivity.this,task.getException().getMessage(), Toast.LENGTH_LONG).show();
+
+                                    }
+
+                                }
+                            });
+
                         }
                         else{
                             Toast.makeText(MainActivity.this, task.getException().getMessage(),Toast.LENGTH_LONG).show();

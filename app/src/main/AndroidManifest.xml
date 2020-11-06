@@ -9,6 +9,8 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.Votepol">
+        <activity android:name=".Home"></activity>
+        <activity android:name=".forgetpasswordActivity" />
         <activity android:name=".createActivity" />
         <activity android:name=".LoginActivity" />
         <activity android:name=".MainActivity">

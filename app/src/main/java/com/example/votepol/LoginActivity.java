@@ -19,6 +19,7 @@ public class LoginActivity extends AppCompatActivity {
     EditText useremail;
     EditText userpass;
     Button userlogin;
+    Button forgetpassword;
     FirebaseAuth firebaseAuth;
 
     @Override
@@ -29,6 +30,8 @@ public class LoginActivity extends AppCompatActivity {
         useremail = findViewById(R.id.lgemail);
         userpass = findViewById(R.id.lgpass);
         userlogin = findViewById(R.id.btnsignin);
+        forgetpassword=findViewById(R.id.btnforgetpassword);
+
 
         firebaseAuth = FirebaseAuth.getInstance();
 
@@ -40,13 +43,24 @@ public class LoginActivity extends AppCompatActivity {
                     @Override
                     public void onComplete(@NonNull Task<AuthResult> task) {
                     if(task.isSuccessful()){
-                        startActivity(new Intent(LoginActivity.this,createActivity.class));
+                        if (firebaseAuth.getCurrentUser().isEmailVerified()){
+                            startActivity(new Intent(LoginActivity.this,createActivity.class));
+                        }else {
+                            Toast.makeText(LoginActivity.this, " Please check your Email for verification .",Toast.LENGTH_LONG).show();
+
+                        }
                     }
                     else{
                         Toast.makeText(LoginActivity.this,task.getException().getMessage(),Toast.LENGTH_LONG).show();
                     }
                     }
                 });
+            }
+        });
+        forgetpassword.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(LoginActivity.this,forgetpasswordActivity.class));
             }
         });
 
