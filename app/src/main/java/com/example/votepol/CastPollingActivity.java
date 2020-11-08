@@ -161,5 +161,5 @@ public class CastPollingActivity extends AppCompatActivity {
         seekBar3.setProgress((int)percent3);
         tvpercent4.setText(String.format("%.0f%%",percent4));
         seekBar4.setProgress((int)percent4);
-    });
+    };
 }
