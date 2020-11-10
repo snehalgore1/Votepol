@@ -42,17 +42,17 @@ public class LoginActivity extends AppCompatActivity {
                 firebaseAuth.signInWithEmailAndPassword(useremail.getText().toString(), userpass.getText().toString()).addOnCompleteListener(new OnCompleteListener<AuthResult>() {
                     @Override
                     public void onComplete(@NonNull Task<AuthResult> task) {
-                    if(task.isSuccessful()){
-                        if (firebaseAuth.getCurrentUser().isEmailVerified()){
-                            startActivity(new Intent(LoginActivity.this,createActivity.class));
-                        }else {
-                            Toast.makeText(LoginActivity.this, " Please check your Email for verification .",Toast.LENGTH_LONG).show();
+                        if(task.isSuccessful()){
+                            if (firebaseAuth.getCurrentUser().isEmailVerified()){
+                                startActivity(new Intent(LoginActivity.this,createActivity.class));
+                            }else {
+                                Toast.makeText(LoginActivity.this, " Please check your Email for verification .",Toast.LENGTH_LONG).show();
 
+                            }
                         }
-                    }
-                    else{
-                        Toast.makeText(LoginActivity.this,task.getException().getMessage(),Toast.LENGTH_LONG).show();
-                    }
+                        else{
+                            Toast.makeText(LoginActivity.this,task.getException().getMessage(),Toast.LENGTH_LONG).show();
+                        }
                     }
                 });
             }

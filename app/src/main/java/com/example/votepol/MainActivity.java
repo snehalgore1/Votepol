@@ -47,7 +47,7 @@ public class MainActivity extends AppCompatActivity {
                                 @Override
                                 public void onComplete(@NonNull Task<Void> task) {
                                     if (task.isSuccessful()){
-                                            Toast.makeText(MainActivity.this, "Registered successfully! Please check your Email for verification .",Toast.LENGTH_LONG).show();
+                                        Toast.makeText(MainActivity.this, "Registered successfully! Please check your Email for verification .",Toast.LENGTH_LONG).show();
                                         email.setText("");
                                         pass.setText("");
                                     }
