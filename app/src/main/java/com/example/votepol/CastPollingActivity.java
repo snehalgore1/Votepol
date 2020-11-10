@@ -61,8 +61,8 @@ public class CastPollingActivity extends AppCompatActivity {
                     //Calculate Percentage
                     calculatePercent();
                 }
-                }
-            });
+            }
+        });
 
         seekBar2.setOnTouchListener(new View.OnTouchListener() {
             @Override
@@ -141,7 +141,7 @@ public class CastPollingActivity extends AppCompatActivity {
                 }
             }
         });
-        }
+    }
 
     private void calculatePercent() {
         //Calculate total
