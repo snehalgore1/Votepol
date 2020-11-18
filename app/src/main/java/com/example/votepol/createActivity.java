@@ -33,6 +33,7 @@ public class createActivity extends AppCompatActivity {
         firebaseAuth=FirebaseAuth.getInstance();
         firebaseUser=firebaseAuth.getCurrentUser();
 
+
         castpoll.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {

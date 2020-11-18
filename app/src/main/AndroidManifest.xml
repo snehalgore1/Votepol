@@ -9,7 +9,7 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.Votepol">
-        <activity android:name=".CastPollingActivity"></activity>
+        <activity android:name=".CastPollingActivity" />
         <activity android:name=".Home" />
         <activity android:name=".forgetpasswordActivity" />
         <activity android:name=".createActivity" />
